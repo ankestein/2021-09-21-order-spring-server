@@ -11,11 +11,12 @@ import java.util.Optional;
 @Repository
 public class ProductRepo {
 
-    private List<Product> products = new ArrayList<>();
-
-    public ProductRepo(List<Product> products) {
-        this.products = products;
-    }
+    private List<Product> products = List.of(
+            new Product("1", "t-shirt"),
+            new Product("2", "socks"),
+            new Product("3", "trousers"),
+            new Product("4", "gloves")
+    );
 
     public List<Product> listProducts() {
         return products;
