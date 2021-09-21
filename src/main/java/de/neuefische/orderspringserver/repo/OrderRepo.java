@@ -1,20 +1,24 @@
 package de.neuefische.orderspringserver.repo;
 
 import de.neuefische.orderspringserver.model.Order;
+import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class OrderRepo {
-    private final Map<String, Order> orders = new HashMap<>();
+
+    private final List<Order> orders = new ArrayList<>();
 
     public List<Order> listOrders(){
-        return List.copyOf(orders.values());
+        return orders;
     }
 
-    public Order addOrder(Order newOrder){
-        orders.put(newOrder.getId(), newOrder);
-        return newOrder;
+    public Order addOrder(Order order){
+        orders.add(order);
+        return order;
     }
 }
