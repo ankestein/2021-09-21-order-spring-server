@@ -3,7 +3,7 @@ package de.neuefische.orderspringserver.service;
 import de.neuefische.orderspringserver.model.Order;
 import de.neuefische.orderspringserver.model.Product;
 import de.neuefische.orderspringserver.repo.OrderRepo;
-import de.neuefische.orderspringserver.repo.ProductService;
+import de.neuefische.orderspringserver.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
