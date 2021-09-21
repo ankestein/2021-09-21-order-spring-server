@@ -34,4 +34,8 @@ public class ProductService {
         }
     }
 
+    public List<Product> getProductByName(String name) {
+        return productRepo.getProductByName(name);
+    }
+
 }
