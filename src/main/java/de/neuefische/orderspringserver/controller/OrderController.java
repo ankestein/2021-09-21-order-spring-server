@@ -22,7 +22,7 @@ public class OrderController {
         return orderService.listOrders();
     }
 
-    @PutMapping
+    @PostMapping
     public Order orderProducts(@RequestBody List<String> productIds) {
         return orderService.orderProducts(productIds);
     }
